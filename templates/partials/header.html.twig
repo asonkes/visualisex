@@ -1,0 +1,55 @@
+<header>
+	<nav>
+		<ul>
+			<li>
+				<a href=" {{ path('app_home')}} ">Accueil</a>
+			</li>
+			<li>
+				<a href=" {{ path('app_projects')}} ">Projects</a>
+			</li>
+			<li>
+				<a href=" {{ path('app_register')}}">Inscription</a>
+			</li>
+			{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+				<!-- Si l'utilisateur est connecté ou "se souvenant de moi" -->
+				<li>
+					<a href="{{ path('app_logout') }}">Se Déconnecter</a>
+				</li>
+			{% else %}
+				<!-- Si l'utilisateur n'est pas connecté -->
+				<li>
+					<a href="{{ path('app_login') }}">Se connecter</a>
+				</li>
+			{% endif %}
+		</ul>
+	</nav>
+</header>
+
+<div class="container_burger">
+	<div class="burger">
+		<i class="fa-solid fa-bars"></i>
+	</div>
+
+	<ul class="menuBurger">
+		<li>
+			<a href=" {{ path('app_home')}} ">Accueil</a>
+		</li>
+		<li>
+			<a href=" {{ path('app_projects')}} ">Projects</a>
+		</li>
+		<li>
+			<a href=" {{ path('app_register')}}">Inscription</a>
+		</li>
+		{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+			<!-- Si l'utilisateur est connecté ou "se souvenant de moi" -->
+			<li>
+				<a href="{{ path('app_logout') }}">Se Déconnecter</a>
+			</li>
+		{% else %}
+			<!-- Si l'utilisateur n'est pas connecté -->
+			<li>
+				<a href="{{ path('app_login') }}">Se connecter</a>
+			</li>
+		{% endif %}
+	</ul>
+</div>

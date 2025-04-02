@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url('/public/images/top-view-note-pad-with-apricots-compote-jam-pinecone-green-background-with-copy-space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.error {
+    max-width: 250px;
+    color: #db4729;
+    padding: 0 !important;
+
+    ul {
+        padding: 0 !important;
+    }
+}

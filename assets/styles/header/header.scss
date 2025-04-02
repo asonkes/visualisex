@@ -1,0 +1,31 @@
+@use "../mixins/mixins" as mixins;
+
+header {
+    background-color: #f08900;
+
+    nav {
+        margin: auto;
+
+        ul {
+            margin: auto;
+            padding: 15px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            @include mixins.md {
+                display: none;
+            }
+
+            li {
+                padding: 0 50px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
