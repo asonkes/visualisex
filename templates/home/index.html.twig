@@ -6,5 +6,20 @@
 {% block body %}
 	<div class="section">
 		<h1>Accueil</h1>
+
+		<div>
+			<h3>Votre projet se nomme :</h3>
+			<div>
+				{% for projects in projects %}
+					<h5>{{projects.name}}</h5>
+				{% endfor %}
+			</div>
+
+			<p>Voulez-vous rejoindre les tâches de ce votre projet:</p>
+			<a href=" {{ path('app_tasks')}} ">
+				Cliquez-ici
+				<i class="fa-solid fa-face-smile"></i>
+			</a>
+		</div>
 	</div>
 {% endblock %}

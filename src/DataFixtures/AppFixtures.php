@@ -32,7 +32,7 @@ class AppFixtures extends Fixture
             $user = new Users();
             $user->setEmail($faker->email);
             $user->setPassword(
-                $this->passwordEncoder->hashPassword($user, 'secret')
+                $this->passwordEncoder->hashPassword($user, '123456!')
             );
             $user->setRoles(['ROLE_USER']);
             $manager->persist($user);
